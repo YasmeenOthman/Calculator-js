@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Simple Calculator</title>
+    <script type="text/javascript" src="calculator.js"></script>
+    <link rel="stylesheet" type="text/css" href="calculator.css" />
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div id="container">
+      <div class="calculator-body">
+        <div class="input-output">
+          <div type="text" class="output" style="color: white">output</div>
+          <div name="text" style="color: white" class="input">input</div>
+        </div>
+        <div class="keys">
+          <button class="keys1" id="btn7">7</button>
+          <button class="keys1" id="btn8">8</button>
+          <button class="keys1" id="btn9">9</button>
+          <button class="keys1" id="divOpr">/</button>
+          <button class="keys1" id="btn4">4</button>
+          <button class="keys1" id="btn5">5</button>
+          <button class="keys1" id="btn6">6</button>
+          <button class="keys1" id="multOpr">x</button>
+          <button class="keys1" id="btn1" value="1">1</button>
+          <button class="keys1" id="btn2" value="2">2</button>
+          <button class="keys1" id="btn3">3</button>
+          <button class="keys1" id="addOpr">+</button>
+          <button class="keys2" style="background-color: orange;" id="clearBtn">AC</button>
+          <button class="keys1" id="btn0">0</button>
+          <button class="keys1" id="eqOpr"><strong>=</strong></button>
+          <button class="keys1" value="-" id="subOpr">-</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+<!-- <script type="text/javascript">
+	var operation = '';
+   $('.keys1').on('click',function(){
+		var pressedValue = $(this).text();
+	   if(pressedValue === '='){
+		   var result = eval(operation);
+		   operation += pressedValue;
+			   operation = result;
+	   }else{
+		   operation += pressedValue;
+	   }
+   $('.result').val(operation);
+   })
+   $('#clearBtn').on('click',function(){
+	   $('.result').val('');
+	   operation = '';
+   })
+
+</script> -->
