@@ -8,13 +8,23 @@
     <div id="container">
       <div class="calculator-body">
         <div class="input-output">
-          <div type="text" id="output" style="color: white">output</div>
-          <div name="text" style="color: white" id="input">input</div>
+          <div
+            type="text"
+            id="output"
+            style="color: white"
+            class="previous-operand"
+          ></div>
+          <div
+            name="text"
+            style="color: white"
+            id="input"
+            class="current-operand"
+          ></div>
         </div>
         <div class="keys">
           <button class="key number">7</button>
           <button class="key number">8</button>
-          <button class="number">9</button>
+          <button class="key number">9</button>
           <button class="key operator">÷</button>
           <button class="key number">4</button>
           <button class="key number">5</button>
@@ -32,8 +42,8 @@
             AC
           </button>
           <button class="key number">0</button>
-          <button class="key number"><strong>=</strong></button>
-          <button class="key operator" value="-">-</button>
+          <button class="key equal"><strong>=</strong></button>
+          <button class="key operator">-</button>
         </div>
       </div>
     </div>
