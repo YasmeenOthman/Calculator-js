@@ -39,6 +39,9 @@ function calculate() {
 }
 
 function equal() {
+  if (!currentOperand.innerText || !previousOperand.innerText) {
+    return;
+  }
   currentOperand.innerText = calculate();
   previousOperand.innerText = "";
 }

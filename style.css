@@ -26,9 +26,9 @@
   box-shadow: 10px 10px 5px rgb(44, 44, 44);
   z-index: 999px;
 }
-.input-output {
+.input-output-container {
   width: 90%;
-  height: 100px;
+  height: 120px;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -37,25 +37,24 @@
   align-self: center;
   border-radius: 5px;
   background-color: #101010;
-  box-shadow: inset 0px 0px 8px 5px rgba(0, 0, 0, 0.3);
+  box-shadow: rgb(89, 88, 88) 0px 0px 5px 4px;
+
   z-index: 999;
 }
 #output,
 #input {
-  padding: 8px;
-  margin-right: 10px;
-  font-size: 2em;
-  margin: 3px;
-  text-align: center;
+  padding: 10px;
+  margin: 3px 10px;
 }
 #input {
   color: rgb(255, 183, 0);
-
   height: 30vh;
+  font-size: 36px;
 }
 #output {
   color: #bbb;
-  height: 20vh;
+  height: 25vh;
+  font-size: 25px;
 }
 .keys {
   height: 100%;
@@ -70,4 +69,9 @@ button {
   font-size: 2em;
   background-color: rgb(31, 30, 30);
   color: white;
+}
+button:hover {
+  font-size: 2em;
+  background-color: rgb(255, 183, 0);
+  color: black;
 }
