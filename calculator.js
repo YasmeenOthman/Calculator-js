@@ -8,20 +8,23 @@ let selectedOperation = null;
 
 // pass the operation the user select
 function selectedOperator(operation) {
+  currentOperand.innerText === "";
   if (currentOperand.innerText === "") return;
   if (previousOperand.innerText !== "") {
     calculate();
+    equal();
   }
+
   selectedOperation = operation;
-  previousOperand.innerText = currentOperand.innerText;
+  previousOperand.innerText = currentOperand.innerText + " " + operation;
   currentOperand.innerText = "";
 }
 
-function calculate(num1, num2, op) {
+function calculate() {
   let result;
-  num1 = parseFloat(previousOperand.innerText);
-  num2 = parseFloat(currentOperand.innerText);
-  op = selectedOperation;
+  let num1 = parseFloat(previousOperand.innerText);
+  let num2 = parseFloat(currentOperand.innerText);
+  let op = selectedOperation;
   if (op === "-") {
     result = num1 - num2;
   } else if (op === "x") {
@@ -35,6 +38,19 @@ function calculate(num1, num2, op) {
   return result;
 }
 
+function equal() {
+  currentOperand.innerText = calculate();
+  previousOperand.innerText = "";
+}
+function appendNumber(number) {
+  currentOperand.innerText += number;
+}
+
+function clearAll() {
+  previousOperand.innerText = "";
+  currentOperand.innerText = "";
+}
+
 // add event listeners to an operator
 operators.forEach((operator) => {
   operator.addEventListener("click", () => {
@@ -45,17 +61,10 @@ operators.forEach((operator) => {
 // add event listeners to select a number
 numbers.forEach((number) => {
   number.addEventListener("click", () => {
-    // add the clicked number to the output screen
-    currentOperand.innerText += number.innerText;
+    appendNumber(number.innerText);
   });
 });
 
-equalButton.addEventListener("click", function () {
-  currentOperand.innerText = calculate();
-  previousOperand.innerText = "";
-});
+equalButton.addEventListener("click", equal);
 
-clearAllButton.addEventListener("click", function () {
-  currentOperand.innerText = "";
-  previousOperand.innerText = "";
-});
+clearAllButton.addEventListener("click", clearAll);
