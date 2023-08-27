@@ -29,12 +29,14 @@ function calculate() {
     result = num1 - num2;
   } else if (op === "x") {
     result = num1 * num2;
+  } else if (op === "÷" && num2 == 0) {
+    return "Error";
   } else if (op === "÷" && num2 !== 0) {
     result = num1 / num2;
   } else if (op === "+") {
     result = num1 + num2;
   }
-  console.log(result);
+
   return result;
 }
 
